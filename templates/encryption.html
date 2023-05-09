@@ -1,0 +1,31 @@
+{% extends 'master.html' %}
+
+{% block title %}
+encrypt
+{% endblock title %}
+
+{% block content %}
+<article>
+    <form action='http://127.0.0.1:5000/download/encrypted' method='POST' enctype="multipart/form-data">
+        <div class="grid">
+            <div></div>
+            <div align='center'><h5>encrypt : </h5></div>
+            <div></div>
+        </div>
+        <div class="grid">
+            <div><textarea rows=4 cols=10  placeholder='Enter the text to encrypt' name='text' required ></textarea></div>
+        </div>
+        <div class="grid">
+            <div><input type='file'  accept='image/*' placeholder='Add profile image' name='img' required /></div>
+        </div>
+        <div class="grid">
+            <div><input type='submit' value='submit' role='button'/></div>
+        </div>
+    </form>
+</article>
+{% endblock content %}
+
+
+{% block footer %}
+
+{% endblock footer %}

@@ -1,0 +1,59 @@
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        .header{
+            margin-top: 0;
+        }
+        .footer{
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <article class="header">
+        <nav>
+            <ul>
+                <li><i class="fa fa-home"></i><strong>Steganography</strong></li>
+            </ul>
+            <ul>
+                <li role="list">
+                    <a>single channel</a>
+                    <ul >
+                        <li><a href='/encrypt'>encryption</a></li>
+                        <li><a href='/decrypt'>decryption</a></li>
+                    </ul>
+                </li>
+                <li role="list">
+                    <a>3 channel</a>
+                    <ul >
+                        <li><a href='/encrypt3'>encryption</a></li>
+                        <li><a href='/decrypt3'>decryption</a></li>
+                    </ul>
+                </li>
+                <li role="list">
+                    <a>on video</a>
+                    <ul >
+                        <li><a href='/encryptv'>encryption</a></li>
+                        <li><a href='/decryptv'>decryption</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </article>
+
+    <div class='container'>
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    
+
+
+
+</body>
+</html>

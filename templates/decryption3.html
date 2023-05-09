@@ -1,0 +1,28 @@
+{% extends 'master.html' %}
+
+{% block title %}
+decrypt
+{% endblock title %}
+
+{% block content %}
+<article>
+    <form action='http://127.0.0.1:5000/download/decrypted3' method='POST' enctype="multipart/form-data">
+        <div class="grid">
+            <div></div>
+            <div align='center'><h5>decrypt 3 channel: </h5></div>
+            <div></div>
+        </div>
+        <div class="grid">
+            <div><input type='file'  accept='image/*' placeholder='Add profile image' name='img' required /></div>
+        </div>
+        <div class="grid">
+            <div><input type='submit' value='submit' role='button'/></div>
+        </div>
+    </form>
+</article>
+{% endblock content %}
+
+{% block footer %}
+
+{% endblock footer %}
+
